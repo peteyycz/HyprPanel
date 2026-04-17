@@ -56,6 +56,11 @@
         }
     }
 
+    .menu-section-container.vpn {
+        margin-top: 0.65em;
+        margin-bottom: 0em;
+    }
+
     .network-element-item {
         &:not(:last-child) {
             margin-bottom: 0.5em;

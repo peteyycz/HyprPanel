@@ -1,6 +1,7 @@
 import DropdownMenu from '../shared/dropdown/index.js';
 import { Ethernet } from './ethernet/index.js';
 import { Wifi } from './wifi/index.js';
+import { Vpn } from './vpn/index.js';
 import { bind } from 'astal';
 import { NoWifi } from './wifi/WirelessAPs/NoWifi.js';
 import { RevealerTransitionMap } from 'src/components/settings/constants.js';
@@ -18,6 +19,7 @@ export default (): JSX.Element => {
             <box className={'menu-items network'}>
                 <box className={'menu-items-container network'} vertical hexpand>
                     <Ethernet />
+                    <Vpn />
                     {bind(networkService, 'wifi').as((wifi) => {
                         if (wifi === null) {
                             return <NoWifi />;
